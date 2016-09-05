@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,23 +18,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MemeMe 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uu-cz-8BY">
-                                <rect key="frame" x="228" y="289" width="145" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxt-1p-alD">
+                                <rect key="frame" x="20" y="550" width="89" height="30"/>
+                                <state key="normal" title="Photo Album"/>
+                                <connections>
+                                    <action selector="PhotoAlbumButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xLH-Dc-6pj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4n9-BO-7Y6">
+                                <rect key="frame" x="526" y="550" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="CameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CUn-dr-19t"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QOD-ve-gIW">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2uu-cz-8BY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iZT-Jm-Pjo"/>
-                            <constraint firstItem="2uu-cz-8BY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tgX-Bq-C2N"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QOD-ve-gIW" secondAttribute="bottom" id="GJh-aF-KOP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4n9-BO-7Y6" secondAttribute="trailing" id="PAh-f2-Qvh"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="lxt-1p-alD" secondAttribute="leading" id="R8G-FH-yHG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QOD-ve-gIW" secondAttribute="trailing" id="bW5-Er-0fW"/>
+                            <constraint firstItem="QOD-ve-gIW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ipI-gq-bO2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lxt-1p-alD" secondAttribute="bottom" constant="20" id="qgJ-41-n8g"/>
+                            <constraint firstItem="QOD-ve-gIW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yn5-kX-wrt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4n9-BO-7Y6" secondAttribute="bottom" constant="20" id="zS7-Ky-c91"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="4n9-BO-7Y6" id="iF7-Fx-snr"/>
+                        <outlet property="imageView" destination="QOD-ve-gIW" id="vDd-f5-b9i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="389" y="358"/>
+            <point key="canvasLocation" x="301" y="102"/>
         </scene>
     </scenes>
 </document>
