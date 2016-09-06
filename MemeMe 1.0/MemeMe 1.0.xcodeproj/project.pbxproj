@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		838061541D7E6FF000F8EF55 /* MemeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838061531D7E6FF000F8EF55 /* MemeTextField.swift */; };
 		83EA92651D7C8637003901B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA92641D7C8637003901B6 /* AppDelegate.swift */; };
 		83EA92671D7C8637003901B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA92661D7C8637003901B6 /* ViewController.swift */; };
 		83EA926A1D7C8637003901B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EA92681D7C8637003901B6 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		838061531D7E6FF000F8EF55 /* MemeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTextField.swift; sourceTree = "<group>"; };
 		83EA92611D7C8637003901B6 /* MemeMe 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MemeMe 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EA92641D7C8637003901B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83EA92661D7C8637003901B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				83EA926B1D7C8638003901B6 /* Assets.xcassets */,
 				83EA926D1D7C8638003901B6 /* LaunchScreen.storyboard */,
 				83EA92701D7C8638003901B6 /* Info.plist */,
+				838061531D7E6FF000F8EF55 /* MemeTextField.swift */,
 			);
 			path = "MemeMe 1.0";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				83EA92671D7C8637003901B6 /* ViewController.swift in Sources */,
 				83EA92651D7C8637003901B6 /* AppDelegate.swift in Sources */,
+				838061541D7E6FF000F8EF55 /* MemeTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +488,7 @@
 				83EA928B1D7C8638003901B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83EA928C1D7C8638003901B6 /* Build configuration list for PBXNativeTarget "MemeMe 1.0Tests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				83EA928E1D7C8638003901B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83EA928F1D7C8638003901B6 /* Build configuration list for PBXNativeTarget "MemeMe 1.0UITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				83EA92911D7C8638003901B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

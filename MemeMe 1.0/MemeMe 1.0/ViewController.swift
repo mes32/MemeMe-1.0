@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var textFieldTop: UITextField!
+    @IBOutlet weak var textFieldTop: MemeTextField!
     @IBOutlet weak var textFieldBottom: UITextField!
     
     var isEmptyTop: Bool = true
@@ -29,10 +29,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //textFieldTop = MemeTextField()
+        
         textFieldTop.text = startingTextTop
         textFieldTop.delegate = self
         textFieldTop.defaultTextAttributes = memeTextAttributes
         textFieldTop.textAlignment = .Center
+
+        //textFieldTop.setup(defaultText: startingTextTop, delegate: self)
         
         textFieldBottom.text = startingTextBottom
         textFieldBottom.delegate = self
