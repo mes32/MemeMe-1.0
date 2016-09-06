@@ -11,50 +11,44 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var textFieldTop: MemeTextField!
-    @IBOutlet weak var textFieldBottom: UITextField!
+    @IBOutlet weak var textFieldBottom: MemeTextField!
     
     var isEmptyTop: Bool = true
     var isEmptyBottom: Bool = true
     
     let startingTextTop = "TOP TEXT"
     let startingTextBottom = "BOTTOM TEXT"
-    let memeTextAttributes = [
-        NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 36)!,
-        NSStrokeColorAttributeName : UIColor.blackColor(),
-        NSForegroundColorAttributeName : UIColor.whiteColor(),
-        NSStrokeWidthAttributeName : -4.0
-    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //textFieldTop.text = startingTextTop
-        //textFieldTop.delegate = self
-        //textFieldTop.defaultTextAttributes = memeTextAttributes
-        //textFieldTop.textAlignment = .Center
 
         textFieldTop.setup(defaultText: startingTextTop, delegate: self)
-        
-        textFieldBottom.text = startingTextBottom
-        textFieldBottom.delegate = self
-        textFieldBottom.defaultTextAttributes = memeTextAttributes
-        textFieldBottom.textAlignment = .Center
-
+        textFieldBottom.setup(defaultText: startingTextBottom, delegate: self)
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        textField.text = ""
+        let memeTextField = textField as! MemeTextField
+        if (!memeTextField.edited) {
+            memeTextField.text = ""
+        }
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        if (textField.text == "") {
-            if (textField == textFieldTop) {
-                textField.text = startingTextTop
-            } else if (textField == textFieldBottom) {
-                textField.text = startingTextBottom
-            }
+        let memeTextField = textField as! MemeTextField
+        if (memeTextField.text == "" && memeTextField.edited) {
+            memeTextField.reset()
         }
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        let memeTextField = textField as! MemeTextField
+        memeTextField.edited = true
+        
+        // Convert typed text to uppercase
+        // I grabbed this line from Stackoverflow: http://stackoverflow.com/questions/21092182/uppercase-characters-in-uitextfield
+        memeTextField.text = (memeTextField.text! as NSString).stringByReplacingCharactersInRange(range, withString:string.uppercaseString)
+        
+        return false
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

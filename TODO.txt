@@ -2,3 +2,4 @@
 2. Editing and displaying text with meme-style typeface
 3. Moving the image view out of the way of the keyboard
 4. Sharing the meme image
+

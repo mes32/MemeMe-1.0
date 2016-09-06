@@ -22,11 +22,10 @@ class MemeTextField: UITextField {
     var edited: Bool = false
     
     func setup(defaultText newDefaultText: String, delegate newDelegate: UITextFieldDelegate) {
-        print("In MemeTextField setup()")
-        
         defaultText = newDefaultText
+        edited = false
+        
         delegate = newDelegate
-
         text = defaultText
         defaultTextAttributes = memeTextAttributes
         textAlignment = .Center
@@ -35,5 +34,9 @@ class MemeTextField: UITextField {
     func reset() {
         super.text = defaultText
         edited = false
+    }
+    
+    func wasEdited() -> Bool {
+        return edited
     }
 }
