@@ -17,17 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MemeMe 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uu-cz-8BY">
-                                <rect key="frame" x="228" y="289" width="145" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bottom" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lt5-Hx-PmX">
+                                <rect key="frame" x="20" y="460" width="560" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="hpY-D9-gyE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="36"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Top" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I2Z-4g-YST">
+                                <rect key="frame" x="20" y="28" width="560" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="Yr0-Xd-A9d"/>
+                                    <constraint firstAttribute="height" constant="124" id="jVG-Eg-svy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="36"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2uu-cz-8BY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iZT-Jm-Pjo"/>
-                            <constraint firstItem="2uu-cz-8BY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tgX-Bq-C2N"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lt5-Hx-PmX" secondAttribute="bottom" constant="20" id="6kW-cN-V5q"/>
+                            <constraint firstItem="I2Z-4g-YST" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Ezm-fb-uhK"/>
+                            <constraint firstItem="I2Z-4g-YST" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="egS-bn-eYb"/>
+                            <constraint firstItem="Lt5-Hx-PmX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zzW-SB-DVv"/>
                         </constraints>
                     </view>
                 </viewController>
