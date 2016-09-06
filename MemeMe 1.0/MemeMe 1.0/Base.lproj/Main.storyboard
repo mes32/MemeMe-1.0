@@ -43,10 +43,14 @@
                             <constraint firstItem="Lt5-Hx-PmX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zzW-SB-DVv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textFieldBottom" destination="Lt5-Hx-PmX" id="d2s-X7-VEl"/>
+                        <outlet property="textFieldTop" destination="I2Z-4g-YST" id="RBq-vf-avx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="389" y="358"/>
+            <point key="canvasLocation" x="481" y="292"/>
         </scene>
     </scenes>
 </document>
