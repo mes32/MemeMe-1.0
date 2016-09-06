@@ -13,7 +13,7 @@ class MemeTextField: UITextField {
     
     private let memeTextAttributes = [
         NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 36)!,
-        NSStrokeColorAttributeName : UIColor.redColor(),
+        NSStrokeColorAttributeName : UIColor.blackColor(),
         NSForegroundColorAttributeName : UIColor.whiteColor(),
         NSStrokeWidthAttributeName : -4.0
     ]
@@ -27,8 +27,7 @@ class MemeTextField: UITextField {
         defaultText = newDefaultText
         delegate = newDelegate
 
-        super.text = "TEST TEST"
-        print("super.text = \(super.text)")
+        text = defaultText
         defaultTextAttributes = memeTextAttributes
         textAlignment = .Center
     }
