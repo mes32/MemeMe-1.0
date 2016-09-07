@@ -21,33 +21,51 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aji-lk-sV3">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Text Here (Bottom)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i9G-if-Abx">
-                                        <rect key="frame" x="110" y="460" width="340" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i9G-if-Abx">
+                                        <rect key="frame" x="160" y="450" width="281" height="30"/>
                                         <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Text Here (Top)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SFW-4P-Nxb">
-                                        <rect key="frame" x="110" y="70" width="340" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SFW-4P-Nxb">
+                                        <rect key="frame" x="176" y="130" width="248" height="30"/>
                                         <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EAz-4w-vi4">
-                                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="EAz-4w-vi4">
+                                        <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="14w-eW-r0a"/>
+                                        </constraints>
                                         <items>
-                                            <barButtonItem title="Camera" width="271" id="gSB-lY-fa2">
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <barButtonItem width="30" systemItem="fixedSpace" id="rcx-Bd-wPt"/>
+                                            <barButtonItem title="Camera" id="Ej6-Xh-cpO">
+                                                <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="32"/>
                                             </barButtonItem>
-                                            <barButtonItem title="Photo Album" width="241" id="5tM-7d-xQf">
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            </barButtonItem>
+                                            <barButtonItem systemItem="flexibleSpace" id="ogc-Hq-Tl2"/>
+                                            <barButtonItem title="Photo Album" id="ghA-Qa-hmr"/>
+                                            <barButtonItem width="30" systemItem="fixedSpace" id="0ib-Te-JaB"/>
                                         </items>
                                     </toolbar>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0sX-Ha-qWh">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0sX-Ha-qWh">
+                                        <rect key="frame" x="0.0" y="-75" width="600" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Zcu-Zi-UU1"/>
+                                        </constraints>
                                         <items>
                                             <barButtonItem title="Share" id="SSN-nb-D3r">
                                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                             </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OiX-Ys-kK8">
+                                        <rect key="frame" x="0.0" y="-5" width="600" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="Lwr-rP-2wd"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="9" right="8"/>
+                                        <items>
+                                            <barButtonItem width="30" systemItem="fixedSpace" id="swa-M3-vhO"/>
+                                            <barButtonItem title="Share" id="XVd-5x-bI4"/>
                                         </items>
                                     </toolbar>
                                 </subviews>
@@ -55,10 +73,18 @@
                                 <constraints>
                                     <constraint firstItem="i9G-if-Abx" firstAttribute="centerX" secondItem="Aji-lk-sV3" secondAttribute="centerX" id="0kr-Uc-O33"/>
                                     <constraint firstAttribute="bottom" secondItem="EAz-4w-vi4" secondAttribute="bottom" id="6mx-gT-s1L"/>
+                                    <constraint firstAttribute="trailing" secondItem="OiX-Ys-kK8" secondAttribute="trailing" id="9y6-pH-E2D"/>
+                                    <constraint firstItem="0sX-Ha-qWh" firstAttribute="leading" secondItem="Aji-lk-sV3" secondAttribute="leading" id="Rbf-JB-tg6"/>
                                     <constraint firstItem="SFW-4P-Nxb" firstAttribute="centerX" secondItem="Aji-lk-sV3" secondAttribute="centerX" id="SgE-iI-iXf"/>
-                                    <constraint firstAttribute="bottom" secondItem="i9G-if-Abx" secondAttribute="bottom" constant="90" id="VcT-Dm-SvC"/>
-                                    <constraint firstItem="SFW-4P-Nxb" firstAttribute="top" secondItem="Aji-lk-sV3" secondAttribute="top" constant="70" id="ab3-KT-oO9"/>
+                                    <constraint firstAttribute="trailing" secondItem="EAz-4w-vi4" secondAttribute="trailing" id="SpI-MP-xMQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="i9G-if-Abx" secondAttribute="bottom" constant="120" id="VcT-Dm-SvC"/>
+                                    <constraint firstItem="SFW-4P-Nxb" firstAttribute="top" secondItem="Aji-lk-sV3" secondAttribute="top" constant="130" id="ab3-KT-oO9"/>
                                     <constraint firstItem="EAz-4w-vi4" firstAttribute="centerX" secondItem="Aji-lk-sV3" secondAttribute="centerX" id="d7d-nc-jR3"/>
+                                    <constraint firstAttribute="trailing" secondItem="0sX-Ha-qWh" secondAttribute="trailing" id="dea-uw-aGo"/>
+                                    <constraint firstItem="OiX-Ys-kK8" firstAttribute="top" secondItem="Aji-lk-sV3" secondAttribute="top" constant="-5" id="mbr-zD-BF9"/>
+                                    <constraint firstItem="EAz-4w-vi4" firstAttribute="leading" secondItem="Aji-lk-sV3" secondAttribute="leading" id="qfG-NV-svM"/>
+                                    <constraint firstItem="OiX-Ys-kK8" firstAttribute="leading" secondItem="Aji-lk-sV3" secondAttribute="leading" id="vqn-yY-lJh"/>
+                                    <constraint firstItem="0sX-Ha-qWh" firstAttribute="leading" secondItem="EAz-4w-vi4" secondAttribute="leading" id="zx7-K1-d14"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -73,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="406" y="365"/>
+            <point key="canvasLocation" x="467" y="275"/>
         </scene>
     </scenes>
 </document>
