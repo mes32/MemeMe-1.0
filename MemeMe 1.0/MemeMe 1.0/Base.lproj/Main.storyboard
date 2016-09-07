@@ -40,9 +40,16 @@
                                             <barButtonItem width="30" systemItem="fixedSpace" id="rcx-Bd-wPt"/>
                                             <barButtonItem title="Camera" id="Ej6-Xh-cpO">
                                                 <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="32"/>
+                                                <connections>
+                                                    <action selector="pressedCamera:" destination="BYZ-38-t0r" id="OEJ-nA-vqp"/>
+                                                </connections>
                                             </barButtonItem>
                                             <barButtonItem systemItem="flexibleSpace" id="ogc-Hq-Tl2"/>
-                                            <barButtonItem title="Photo Album" id="ghA-Qa-hmr"/>
+                                            <barButtonItem title="Photo Album" id="ghA-Qa-hmr">
+                                                <connections>
+                                                    <action selector="pressedPhotoAlbum:" destination="BYZ-38-t0r" id="yfa-tc-AgG"/>
+                                                </connections>
+                                            </barButtonItem>
                                             <barButtonItem width="30" systemItem="fixedSpace" id="0ib-Te-JaB"/>
                                         </items>
                                     </toolbar>
@@ -65,7 +72,11 @@
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="9" right="8"/>
                                         <items>
                                             <barButtonItem width="30" systemItem="fixedSpace" id="swa-M3-vhO"/>
-                                            <barButtonItem title="Share" id="XVd-5x-bI4"/>
+                                            <barButtonItem title="Share" id="XVd-5x-bI4">
+                                                <connections>
+                                                    <action selector="pressedShare:" destination="BYZ-38-t0r" id="YKq-H7-LbN"/>
+                                                </connections>
+                                            </barButtonItem>
                                         </items>
                                     </toolbar>
                                 </subviews>
@@ -99,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="467" y="275"/>
+            <point key="canvasLocation" x="202" y="272"/>
         </scene>
     </scenes>
 </document>

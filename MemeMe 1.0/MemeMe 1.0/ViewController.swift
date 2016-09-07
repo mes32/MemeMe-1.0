@@ -20,6 +20,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func pressedShare(sender: UIBarButtonItem) {
+        print("Pressed Share")
+    }
+    
+    @IBAction func pressedCamera(sender: UIBarButtonItem) {
+        print("Pressed Camera")
+    }
+    
+    @IBAction func pressedPhotoAlbum(sender: UIBarButtonItem) {
+        print("Pressed Photo Album")
+    }
+
 
 }
 
