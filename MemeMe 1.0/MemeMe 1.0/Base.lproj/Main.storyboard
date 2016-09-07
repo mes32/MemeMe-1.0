@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,23 +18,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MemeMe 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uu-cz-8BY">
-                                <rect key="frame" x="228" y="289" width="145" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aji-lk-sV3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Text Here (Bottom)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i9G-if-Abx">
+                                        <rect key="frame" x="110" y="460" width="340" height="30"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Text Here (Top)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SFW-4P-Nxb">
+                                        <rect key="frame" x="110" y="70" width="340" height="30"/>
+                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EAz-4w-vi4">
+                                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                        <items>
+                                            <barButtonItem title="Camera" width="271" id="gSB-lY-fa2">
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </barButtonItem>
+                                            <barButtonItem title="Photo Album" width="241" id="5tM-7d-xQf">
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0sX-Ha-qWh">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <items>
+                                            <barButtonItem title="Share" id="SSN-nb-D3r">
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="i9G-if-Abx" firstAttribute="centerX" secondItem="Aji-lk-sV3" secondAttribute="centerX" id="0kr-Uc-O33"/>
+                                    <constraint firstAttribute="bottom" secondItem="EAz-4w-vi4" secondAttribute="bottom" id="6mx-gT-s1L"/>
+                                    <constraint firstItem="SFW-4P-Nxb" firstAttribute="centerX" secondItem="Aji-lk-sV3" secondAttribute="centerX" id="SgE-iI-iXf"/>
+                                    <constraint firstAttribute="bottom" secondItem="i9G-if-Abx" secondAttribute="bottom" constant="90" id="VcT-Dm-SvC"/>
+                                    <constraint firstItem="SFW-4P-Nxb" firstAttribute="top" secondItem="Aji-lk-sV3" secondAttribute="top" constant="70" id="ab3-KT-oO9"/>
+                                    <constraint firstItem="EAz-4w-vi4" firstAttribute="centerX" secondItem="Aji-lk-sV3" secondAttribute="centerX" id="d7d-nc-jR3"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2uu-cz-8BY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iZT-Jm-Pjo"/>
-                            <constraint firstItem="2uu-cz-8BY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tgX-Bq-C2N"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Aji-lk-sV3" secondAttribute="bottom" id="3ub-nM-0fX"/>
+                            <constraint firstItem="Aji-lk-sV3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="8N4-GW-UBB"/>
+                            <constraint firstItem="Aji-lk-sV3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Uw9-P0-DhZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Aji-lk-sV3" secondAttribute="trailing" constant="-20" id="js9-2N-pFo"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="389" y="358"/>
+            <point key="canvasLocation" x="406" y="365"/>
         </scene>
     </scenes>
 </document>
