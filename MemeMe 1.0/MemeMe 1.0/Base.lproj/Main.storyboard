@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,17 +18,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MemeMe 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uu-cz-8BY">
-                                <rect key="frame" x="228" y="289" width="145" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBk-8t-aGC">
+                                <rect key="frame" x="20" y="28" width="560" height="552"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CameraIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Wzx-po-pEs">
+                                        <rect key="frame" x="160" y="212" width="240" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="Vgk-rl-tMv"/>
+                                            <constraint firstAttribute="height" constant="128" id="kKg-Ek-Zga"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DBT-Vp-nju">
+                                        <rect key="frame" x="232" y="142" width="97" height="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6yg-ZT-pAW">
+                                        <rect key="frame" x="232" y="380" width="97" height="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMf-sX-yj9">
+                                        <rect key="frame" x="167" y="450" width="227" height="30"/>
+                                        <state key="normal" title="SAVE / SHARE"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Wzx-po-pEs" firstAttribute="top" secondItem="DBT-Vp-nju" secondAttribute="bottom" constant="40" id="A6Y-Su-WMl"/>
+                                    <constraint firstItem="rMf-sX-yj9" firstAttribute="top" secondItem="6yg-ZT-pAW" secondAttribute="bottom" constant="40" id="IVz-hf-1dU"/>
+                                    <constraint firstItem="Wzx-po-pEs" firstAttribute="centerX" secondItem="zBk-8t-aGC" secondAttribute="centerX" id="M1X-KK-pmX"/>
+                                    <constraint firstItem="Wzx-po-pEs" firstAttribute="centerY" secondItem="zBk-8t-aGC" secondAttribute="centerY" id="PhK-Ik-buZ"/>
+                                    <constraint firstItem="rMf-sX-yj9" firstAttribute="centerX" secondItem="zBk-8t-aGC" secondAttribute="centerX" id="eVm-sD-vNp"/>
+                                    <constraint firstItem="DBT-Vp-nju" firstAttribute="centerX" secondItem="zBk-8t-aGC" secondAttribute="centerX" id="oU1-kR-nh3"/>
+                                    <constraint firstItem="6yg-ZT-pAW" firstAttribute="top" secondItem="Wzx-po-pEs" secondAttribute="bottom" constant="40" id="yKh-EB-dtO"/>
+                                    <constraint firstItem="6yg-ZT-pAW" firstAttribute="centerX" secondItem="zBk-8t-aGC" secondAttribute="centerX" id="zeG-14-nN7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2uu-cz-8BY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iZT-Jm-Pjo"/>
-                            <constraint firstItem="2uu-cz-8BY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tgX-Bq-C2N"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="zBk-8t-aGC" secondAttribute="leading" id="IG6-Hb-TU6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zBk-8t-aGC" secondAttribute="trailing" id="KPd-Dm-Wf7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zBk-8t-aGC" secondAttribute="bottom" constant="20" id="ZLu-TY-DCW"/>
+                            <constraint firstItem="zBk-8t-aGC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="hXe-jz-Huo"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,4 +72,7 @@
             <point key="canvasLocation" x="389" y="358"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CameraIcon" width="120" height="120"/>
+    </resources>
 </document>
